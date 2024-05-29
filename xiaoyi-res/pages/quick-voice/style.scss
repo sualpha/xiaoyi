@@ -1,0 +1,63 @@
+.content {
+    padding: 50rpx;
+
+    .cell {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        background: #ffffff;
+
+        &::after {
+            border: none;
+        }
+
+        .icon {
+            flex-shrink: 0;
+            width: 40rpx;
+            height: 40rpx;
+        }
+
+        .label {
+            flex-grow: 1;
+            margin-left: 30rpx;
+            text-align: left;
+            font-size: 30rpx;
+        }
+
+        .more {
+            flex-shrink: 0;
+            width: 40rpx;
+            height: 40rpx;
+        }
+
+    }
+
+	.popup {
+		 position: relative;
+		 overflow: hidden;
+
+	    &-title {
+	        height: 100rpx;
+	        line-height: 100rpx;
+	        text-align: center;
+	        font-size: 32rpx;
+	    }
+	
+	    &-button {
+	        border-radius: 4px;
+	        margin: 25px auto;
+	        width: 180px;
+	        height: 40px;
+	        line-height: 40px;
+	        text-align: center;
+	        background: #F2F2F2;
+	        font-size: 30rpx;
+			background: $canbin-expenses-color;
+			color: #ffffff;
+	    }
+	
+	}
+	
+
+}

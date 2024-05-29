@@ -1,0 +1,152 @@
+{
+	"pages": [{
+			"path": "pages/home/index",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#3eb575",
+				"backgroundColor": "#ededed",
+				"backgroundColorTop": "#3eb575",
+				"backgroundTextStyle": "light",
+				"navigationBarTitleText": "小易记账助手",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50
+			}
+		},
+		{
+			"path": "pages/member/index",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#3eb575",
+				"backgroundColor": "#ededed",
+				"backgroundColorTop": "#3eb575",
+				"backgroundTextStyle": "light",
+				"disableScroll": true,
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/record/index",
+			"style": {
+				"disableScroll": true,
+				"app-plus": {
+					"softinputMode": "adjustPan"
+				}
+			}
+		},
+		{
+			"path": "pages/detail/index",
+			"style": {
+				"disableScroll": true
+			}
+		},
+		{
+			"path": "pages/member-info/index",
+			"style": {
+				"disableScroll": true,
+				"navigationBarTitleText": "个人信息"
+			}
+		},
+		{
+			"path": "pages/quick-voice/index",
+			"style": {
+				"disableScroll": true,
+				"navigationBarTitleText": "快捷语音记账"
+			}
+		},
+		{
+			"path": "pages/quick-voice/webview-ios/index",
+			"style": {
+				"disableScroll": true,
+				"navigationBarTitleText": "ios语音记账"
+			}
+		},
+		{
+			"path": "pages/member-invite/index",
+			"style": {
+				"disableScroll": true,
+				"navigationBarTitleText": "推荐好友"
+			}
+		},
+		{
+			"path": "pages/analysis/index",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#3eb575",
+				"backgroundColor": "#ffffff",
+				"backgroundColorTop": "#3eb575",
+				"backgroundTextStyle": "light",
+				"navigationBarTitleText": "统计",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50
+			}
+		},
+		{
+			"path": "pages/analysis/list/index",
+			"style": {
+				"backgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50
+			}
+		},
+		{
+			"path": "pages/vip/index",
+			"style": {
+				"disableScroll": true,
+				"navigationBarTitleText": "开通会员"
+			}
+		}
+	],
+	"globalStyle": {
+	"navigationBarTextStyle": "white",
+	"navigationBarBackgroundColor": "#3eb575",
+	"backgroundColor": "#ededed",
+	"backgroundColorTop": "#3eb575",
+	"backgroundTextStyle": "light",
+		"usingComponents": {
+			"van-popup": "/wxcomponents/vant/popup/index",
+			"van-swipe-cell": "/wxcomponents/vant/swipe-cell/index",
+			"van-calendar": "/wxcomponents/vant/calendar/index",
+			"van-progress": "/wxcomponents/vant/progress/index",
+			"van-loading": "/wxcomponents/vant/loading/index",
+			"van-field": "/wxcomponents/vant/field/index",
+			"van-search": "/wxcomponents/vant/search/index",
+			"van-button": "/wxcomponents/vant/button/index",
+			"van-dialog": "/wxcomponents/vant/dialog/index"
+		}
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3EB575",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/home/index",
+				"iconPath": "static/images/icon_home_default.png",
+				"selectedIconPath": "static/images/icon_home_selected.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/member/index",
+				"iconPath": "static/images/icon_user_default.png",
+				"selectedIconPath": "static/images/icon_user_selected.png",
+				"text": "我的"
+			}
+		]
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "PROD Environment",
+				"path": "pages/home/index",
+				"query": "ENV=PROD"
+			},
+			{
+				"name": "DEV Environment",
+				"path": "pages/home/index",
+				"query": "ENV=DEV"
+			}
+		]
+	}
+}

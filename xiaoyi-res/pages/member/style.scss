@@ -1,0 +1,150 @@
+.content {
+    padding: 50rpx;
+
+    .user-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20rpx;
+
+        .avatar {
+            flex-shrink: 0;
+            width: 120rpx;
+            height: 120rpx;
+            border-radius: 100%;
+        }
+
+        .wrap {
+            flex-grow: 1;
+            margin-left: 50rpx;
+            display: flex;
+			flex-direction: column;
+            justify-content: center;
+			
+			.name-content{
+				display: flex;
+				margin-bottom: 10rpx;
+				.name {
+				    font-size: 38rpx;
+				    font-weight: bold;
+				}
+				
+				.time {
+				    margin-top: 8rpx;
+				    font-size: 26rpx;
+				    color: #8e8e8e;
+				}
+			}
+
+        
+			
+			.day-content{
+				display: flex;
+				justify-content: space-between;
+				
+				.day-wrap {
+				    flex-grow: 1;
+				    display: flex;
+				    flex-direction: column;
+				    justify-content: center;
+				
+				    .time {
+				        margin-top: 8rpx;
+				        font-size: 26rpx;
+				        color: #8e8e8e;
+				    }
+				
+				}
+			}
+
+        }
+
+
+        .more {
+            flex-shrink: 0;
+            width: 40rpx;
+            height: 40rpx;
+        }
+
+    }
+	
+	.vip-box {
+	  width: 100%;
+	  height: 130rpx;
+	  background-size: cover;
+	  box-sizing: border-box;
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  padding: 0 30rpx;
+	  margin-bottom: 10rpx;
+	  .vip-title {
+	    font-size: 42rpx;
+	    color: #fff;
+	    font-family: 'Yeseva';
+	    background-image: linear-gradient(to bottom, #f0e1b7, #e0c38a);
+	    -webkit-background-clip: text;
+	    color: transparent;
+	    font-weight: 700;
+	  }
+	  .vip-desc {
+	    font-size: 24rpx;
+	    color: #999999;
+	    margin-top: 10rpx;
+	  }
+	  .vip-btn {
+	    width: 162rpx;
+	    height: 60rpx;
+	    background: url('@/static/vip/button_vip_01.png');
+	    background-size: cover;
+	  }
+	}
+
+    .cell {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        background: #ffffff;
+
+        &::after {
+            border: none;
+        }
+
+        .icon {
+            flex-shrink: 0;
+            width: 40rpx;
+            height: 40rpx;
+        }
+
+        .label {
+            flex-grow: 1;
+            margin-left: 30rpx;
+            text-align: left;
+            font-size: 30rpx;
+        }
+
+        .more {
+            flex-shrink: 0;
+            width: 40rpx;
+            height: 40rpx;
+        }
+
+    }
+
+    .divider {
+        height: 1px;
+        background: #F7F8FA;
+        margin: 15rpx 0;
+    }
+
+    .version {
+        text-align: center;
+        color: #8e8e8e;
+        position: fixed;
+        left: 0;
+        bottom: 50rpx;
+        width: 100%;
+        font-size: 26rpx;
+    }
+
+}

@@ -1,0 +1,64 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: xxxxx
+    url: jdbc:mysql://xxx.xx.xxx.xxx:3306/xiaoyi?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
+
+sa-token:
+  # 前端用户登录，用于加密 JWT
+  jwt-secret-key: ${JWT_SECRET:XiaoYiKeJi-dev}
+  # JWT 有效期
+  timeout: ${LOGIN_TIMEOUT_SECONDS:54000}
+  token-name: XiaoYiToken
+
+logging:
+  level:
+    com.cloudyi.ledger.mapper: debug
+    com.cloudyi.member.mapper: debug
+
+chat:
+  # OpenAI API Key - https://platform.openai.com/overview
+  openai_api_key: ${CHAT_OPENAI_API_KEY:xxxxxx}
+  # change this to an `accessToken` extracted from the ChatGPT site's `https://chat.openai.com/api/auth/session` response
+  openai_access_token: ${CHAT_OPENAI_ACCESS_TOKEN:}
+  # OpenAI API Base URL - https://api.openai.com/，要加/后缀chat.xxxxx.top
+  openai_api_base_url: ${CHAT_OPENAI_API_BASE_URL:https://chat.xxxxx.top/}
+  # API Model - https://platform.openai.com/docs/models apiKey 和 AccessToken mode 不一样
+  openai_api_model: ${CHAT_OPENAI_API_MODEL:gpt-3.5-turbo}
+  # 反向代理地址 AccessToken 时使用
+  api_reverse_proxy: ${CHAT_API_REVERSE_PROXY:}
+  # 超时毫秒
+  timeout_ms: ${CHAT_TIMEOUT_MS:100000}
+
+  azure_openai_key: xxxxxx
+
+  azure_openai_endpoint: https://xxxxx.openai.azure.com/
+
+  azure_openai_deployment: gpt-35-turbo
+
+  first_gpt: 2
+  # HTTP 代理
+  http_proxy_host: ${CHAT_HTTP_PROXY_HOST:}
+  # HTTP 代理
+  http_proxy_port: ${CHAT_HTTP_PROXY_PORT:}
+
+chat-limit:
+  # ip 时间内最大请求次数
+  ipMaxRequest: ${CHAT_IP_MAX_REQUEST:10}
+  # ip 最大请求时间间隔（秒）
+  ipMaxRequestSecond: ${CHAT_IP_MAX_REQUEST_SECOND:3600}
+
+wechat:
+  mini_app_id: xxxxx
+  mini_app_secret: xxxxxx
+
+qiniu:
+  access_key: xxxxxx
+  secret_key: xxxxx
+  bucket_name: xxxx
+
+huawei-sis:
+  access_key: xxxxx
+  secret_key: xxxxxx
+  project_id: xxxxxx

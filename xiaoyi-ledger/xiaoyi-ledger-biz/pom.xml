@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.cloudyi</groupId>
+        <artifactId>xiaoyi-ledger</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>xiaoyi-ledger-biz</artifactId>
+    <packaging>jar</packaging>
+    <name>xiaoyi-ledger-biz</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.cloudyi</groupId>
+            <artifactId>xiaoyi-ledger-api</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.cloudyi</groupId>
+            <artifactId>xiaoyi-member-api</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <!-- Web 相关 -->
+        <dependency>
+            <groupId>com.cloudyi</groupId>
+            <artifactId>xiaoyi-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.cloudyi</groupId>
+            <artifactId>xiaoyi-starter-orm</artifactId>
+        </dependency>
+    </dependencies>
+</project>

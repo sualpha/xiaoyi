@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API密钥页面</title>
+    <!-- 引入Clipboard.js库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .api-key-container {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .copy-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .avatar {
+            max-width: 150px; /* 设置头像的最大宽度 */
+            height: auto; /* 自适应高度 */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="api-key-container">
+        <div id="apiKey" th:attr="data-apikey=${apikey}"></div>
+        <img class="avatar" th:src="${avatarUrl}" alt="小易助手">
+        <div class="button-container">
+            <button class="copy-button" id="copyButton">使用快捷指令</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 添加按钮点击后的复制和跳转逻辑
+    document.getElementById('copyButton').addEventListener('click', function() {
+        // 获取API密钥的文本
+        var apiKey = document.getElementById('apiKey').getAttribute('data-apikey');
+
+        // 创建一个临时的文本输入元素
+        var tempInput = document.createElement('input');
+        tempInput.setAttribute('value', apiKey);
+        document.body.appendChild(tempInput);
+
+        // 选中文本并复制到剪贴板
+        tempInput.select();
+        document.execCommand('copy');
+
+        // 移除临时输入元素
+        document.body.removeChild(tempInput);
+
+        // 跳转到其他网站
+        window.location.href = 'https://www.icloud.com/shortcuts/02f32c53ed824b47b686cefb4dcf38d9'; // 替换为您想要跳转的网址
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+}
+.content {
+  background: #fff;
+  box-shadow: 0px 4rpx 8rpx 0px rgb(0, 0, 0, 0.05);
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 32rpx;
+  padding: 24rpx;
+  box-sizing: border-box;
+  
+  .pic{
+	  margin-top: 30rpx;
+  }
+}

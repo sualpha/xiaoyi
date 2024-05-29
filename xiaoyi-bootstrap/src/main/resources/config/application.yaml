@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring:
+  profiles:
+    active: dev
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 50MB
+cdn:
+  domain: cdn.cloudyi.tech
+

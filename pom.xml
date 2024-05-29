@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.cloudyi</groupId>
+	<artifactId>xiaoyi</artifactId>
+	<version>${revision}</version>
+	<name>${project.artifactId}</name>
+	<packaging>pom</packaging>
+	<description>小易ai助手</description>
+
+	<modules>
+		<module>xiaoyi-admin</module>
+		<module>xiaoyi-mini</module>
+		<module>xiaoyi-bootstrap</module>
+		<module>xiaoyi-gpt</module>
+		<module>xiaoyi-open</module>
+		<module>xiaoyi-framework</module>
+		<module>xiaoyi-dependencies</module>
+        <module>xiaoyi-member</module>
+		<module>xiaoyi-ledger</module>
+        <module>xiaoyi-wechat</module>
+        <module>xiaoyi-baseinfo</module>
+    </modules>
+
+	<properties>
+		<revision>1.0.0</revision>
+		<java.version>17</java.version>
+		<mapstruct.version>1.5.3.Final</mapstruct.version>
+		<lombok.version>1.18.26</lombok.version>
+		<maven.plugin.version>3.8.1</maven.plugin.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.cloudyi</groupId>
+				<artifactId>xiaoyi-dependencies</artifactId>
+				<version>${revision}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- maven-compiler-plugin 插件，解决 spring-boot-configuration-processor + Lombok + MapStruct 组合 -->
+				<!-- https://stackoverflow.com/questions/33483697/re-run-spring-boot-configuration-annotation-processor-to-update-generated-metada -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven.plugin.version}</version>
+					<configuration>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
+						<encoding>UTF-8</encoding>
+						<annotationProcessorPaths>
+							<path>
+								<groupId>org.projectlombok</groupId>
+								<artifactId>lombok</artifactId>
+								<version>${lombok.version}</version>
+							</path>
+							<path>
+								<groupId>org.mapstruct</groupId>
+								<artifactId>mapstruct-processor</artifactId>
+								<version>${mapstruct.version}</version>
+							</path>
+						</annotationProcessorPaths>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<!-- 使用 huaweicloud 的 Maven 源，提升下载速度 -->
+	<repositories>
+		<repository>
+			<id>huaweicloudmaven</id>
+			<name>huaweicloud</name>
+			<url>https://mirrors.huaweicloud.com/repository/maven/</url>
+		</repository>
+	</repositories>
+
+</project>

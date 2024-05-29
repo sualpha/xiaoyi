@@ -1,0 +1,30 @@
+.content {
+    height: 100%;
+    background-color: #fff;
+    margin-top: 100rpx;
+	display: flex;
+	justify-content: center;
+
+    .cell-content {
+        display: flex;
+		flex-direction:column;
+		align-items: center;
+		
+        padding: 0 40rpx;
+        font-size: 32rpx;
+
+        .label {
+			padding: 15rpx 40rpx;
+			display: flex;
+			justify-content: center;
+            width: 440rpx;
+            flex-shrink: 0;
+        }
+		
+		.label-content{
+			display: flex;
+			align-items: center;
+		}
+
+    }
+}

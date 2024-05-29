@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.cloudyi</groupId>
+        <artifactId>xiaoyi-wechat</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>xiaoyi-wechat-biz</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.cloudyi</groupId>
+            <artifactId>xiaoyi-wechat-api</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <!-- Web 相关 -->
+        <dependency>
+            <groupId>com.cloudyi</groupId>
+            <artifactId>xiaoyi-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.cloudyi</groupId>
+            <artifactId>xiaoyi-starter-orm</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>weixin-java-miniapp</artifactId>
+        </dependency>
+    </dependencies>
+</project>
