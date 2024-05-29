@@ -1,0 +1,1 @@
+这是小易ai助手，可以帮助你语音记账,链接了chatgpt，可以使用官方chatgpt对接，也可以使用azure_openai,语音识别使用的是华为sis
